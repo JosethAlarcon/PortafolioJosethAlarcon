@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\joset\\source\\repos\\Portafolio-Personal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EEE5604-0077-4BC8-8732-1D64A426820D}|Portafolio\\Portafolio.csproj|c:\\users\\joset\\source\\repos\\portafolio-personal\\portafolio\\views\\home\\_presentacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EEE5604-0077-4BC8-8732-1D64A426820D}|Portafolio\\Portafolio.csproj|solutionrelative:portafolio\\views\\home\\_presentacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EEE5604-0077-4BC8-8732-1D64A426820D}|Portafolio\\Portafolio.csproj|c:\\users\\joset\\source\\repos\\portafolio-personal\\portafolio\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EEE5604-0077-4BC8-8732-1D64A426820D}|Portafolio\\Portafolio.csproj|solutionrelative:portafolio\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +35,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Presentacion.cshtml",
+              "DocumentMoniker": "C:\\Users\\joset\\source\\repos\\Portafolio-Personal\\Portafolio\\Views\\Home\\_Presentacion.cshtml",
+              "RelativeDocumentMoniker": "Portafolio\\Views\\Home\\_Presentacion.cshtml",
+              "ToolTip": "C:\\Users\\joset\\source\\repos\\Portafolio-Personal\\Portafolio\\Views\\Home\\_Presentacion.cshtml",
+              "RelativeToolTip": "Portafolio\\Views\\Home\\_Presentacion.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T03:50:02.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\joset\\source\\repos\\Portafolio-Personal\\Portafolio\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Portafolio\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\joset\\source\\repos\\Portafolio-Personal\\Portafolio\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Portafolio\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T03:49:55.036Z"
             }
           ]
         }

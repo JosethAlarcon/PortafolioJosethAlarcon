@@ -7,10 +7,10 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: PortafolioJosethAlarcon
-  AZURE_WEBAPP_PACKAGE_PATH: Portafolio-Personal/published
+  AZURE_WEBAPP_PACKAGE_PATH: Portafolio/published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
-  WORKING_DIRECTORY: Portafolio-Personal
+  WORKING_DIRECTORY: Portafolio
 
 jobs:
   build-and-deploy:
