@@ -1,0 +1,41 @@
+name: Deploy ASP.NET Core App to Azure (Direct Publish)
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  AZURE_WEBAPP_NAME: PortafolioJosethAlarcon
+  AZURE_WEBAPP_PACKAGE_PATH: Portafolio-Personal/published
+  CONFIGURATION: Release
+  DOTNET_CORE_VERSION: 8.0.x
+  WORKING_DIRECTORY: Portafolio-Personal
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
+
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.WORKING_DIRECTORY }}
+
+      - name: Build
+        run: dotnet build ${{ env.WORKING_DIRECTORY }} --configuration ${{ env.CONFIGURATION }} --no-restore
+
+      - name: Publish
+        run: dotnet publish ${{ env.WORKING_DIRECTORY }} --configuration ${{ env.CONFIGURATION }} --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.PortafolioJosethAlarcon_CF8D }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
