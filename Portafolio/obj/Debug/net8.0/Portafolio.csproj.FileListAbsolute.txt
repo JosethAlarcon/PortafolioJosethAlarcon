@@ -44,6 +44,7 @@ C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\Port
 C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\Portafolio.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\Portafolio.RazorAssemblyInfo.cache
 C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\Portafolio.RazorAssemblyInfo.cs
+C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\Portafolio.sourcelink.json
 C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\joset\Source\Repos\Portafolio-Personal\Portafolio\obj\Debug\net8.0\staticwebassets\msbuild.Portafolio.Microsoft.AspNetCore.StaticWebAssets.props

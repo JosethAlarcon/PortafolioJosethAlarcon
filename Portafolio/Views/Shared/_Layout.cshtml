@@ -8,42 +8,60 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Portafolio.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/faviconSF.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Portafolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Proyectos">Proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
-                        </li>
-                    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top" style="background-color: #343a40;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                            <a class="nav-link text-white fw-bold fs-5 icono-red-social" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link text-white fw-bold fs-5 icono-red-social" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link text-white fw-bold fs-5 icono-red-social" asp-area="" asp-controller="Home" asp-action="Proyectos">Todos Mis Proyectos</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <a href="https://github.com/JosethAlarcon" target="_blank" class="text-white me-3">
+                            <i class="bi bi-github fs-2 icono-red-social"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joseth-alarcon/" target="_blank" class="text-white">
+                            <i class="bi bi-linkedin fs-2 icono-red-social"></i>
+                    </a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+
     </header>
     <div class="container-fuid">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 mt-3 flex-fill">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Portafolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="bg-dark text-white py-2 shadow-sm mt-auto">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-2 mb-md-0">
+                <strong class="fs-4">&copy; 2025 - Joseth Alarcón</strong> &nbsp;|&nbsp;
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-white text-decoration-none fs-4">Política de Privacidad</a>
+            </div>
+            <div>
+                <a href="https://github.com/JosethAlarcon" target="_blank" class="text-white me-3">
+                    <i class="bi bi-github fs-2 icono-red-social"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joseth-alarcon/" target="_blank" class="text-white">
+                    <i class="bi bi-linkedin fs-2 icono-red-social"></i>
+                </a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

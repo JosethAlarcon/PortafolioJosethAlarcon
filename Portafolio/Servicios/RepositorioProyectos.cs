@@ -15,40 +15,59 @@ namespace Portafolio.Servicios
             {
                 Titulo = "BalanceFin Pro",
                 Descripcion = "Proyecto realizado con React y TypeScript",
-                Link = "https://balance-fin-pro-team-joseth.netlify.app/",
-                ImagenURL = "/imagenes/BalanceFin-Pro.jpg"
+                Imagenes = new List<string>{
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg"
+                },
+                Link = "https://balance-fin-pro-team-joseth.netlify.app/",    
             },
 
                 new ProyectoDTO
             {
                 Titulo = "Gif Total",
                 Descripcion = "Proyecto realizado con React y JavaScript",
-                Link = "https://gif-experto-joseth.netlify.app/",
-                ImagenURL = "/imagenes/Gif-Total.jpg"
+                Imagenes = new List<string>{
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg"
+                },
+                Link = "https://balance-fin-pro-team-joseth.netlify.app/",
             },
                 new ProyectoDTO
             {
                 Titulo = "Balance",
                 Descripcion = "Proyecto realizado con React y TypeScript",
+                Imagenes = new List<string>{
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg"
+                },
                 Link = "https://balance-fin-pro-team-joseth.netlify.app/",
-                ImagenURL = "/imagenes/BalanceFin-Pro.jpg"
             },
                 new ProyectoDTO
             {
                 Titulo = "Balance",
                 Descripcion = "Proyecto realizado con React y TypeScript",
+                Imagenes = new List<string>{
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg"
+                },
                 Link = "https://balance-fin-pro-team-joseth.netlify.app/",
-                ImagenURL = "/imagenes/BalanceFin-Pro.jpg"
             },
                 new ProyectoDTO
             {
                 Titulo = "Balance",
                 Descripcion = "Proyecto realizado con React y TypeScript",
+                Imagenes = new List<string>{
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg",
+                    "/imagenes/BalanceFin-Pro.jpg"
+                },
                 Link = "https://balance-fin-pro-team-joseth.netlify.app/",
-                ImagenURL = "/imagenes/BalanceFin-Pro.jpg"
             },
             };
-
         }
     }
 }

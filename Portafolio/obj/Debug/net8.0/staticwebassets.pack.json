@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\joset\\Source\\Repos\\Portafolio-Personal\\Portafolio\\wwwroot\\faviconSF.png",
+      "PackagePath": "staticwebassets\\faviconSF.png"
+    },
+    {
       "Id": "C:\\Users\\joset\\Source\\Repos\\Portafolio-Personal\\Portafolio\\wwwroot\\imagenes\\BalanceFin-Pro.jpg",
       "PackagePath": "staticwebassets\\imagenes\\BalanceFin-Pro.jpg"
     },
@@ -51,6 +55,14 @@
     {
       "Id": "C:\\Users\\joset\\Source\\Repos\\Portafolio-Personal\\Portafolio\\wwwroot\\imagenes\\foto3.jpg",
       "PackagePath": "staticwebassets\\imagenes\\foto3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\joset\\Source\\Repos\\Portafolio-Personal\\Portafolio\\wwwroot\\imagenes\\fotoTraje.png",
+      "PackagePath": "staticwebassets\\imagenes\\fotoTraje.png"
+    },
+    {
+      "Id": "C:\\Users\\joset\\Source\\Repos\\Portafolio-Personal\\Portafolio\\wwwroot\\imagenes\\fotoTraje2.png",
+      "PackagePath": "staticwebassets\\imagenes\\fotoTraje2.png"
     },
     {
       "Id": "C:\\Users\\joset\\Source\\Repos\\Portafolio-Personal\\Portafolio\\wwwroot\\js\\site.js",

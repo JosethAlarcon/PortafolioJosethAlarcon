@@ -1,24 +1,65 @@
-﻿
-@{
+﻿@{
 	ViewData["Title"] = "Contacto";
 }
 
-<h1 class="m-3">Formulario de Contacto</h1>
+<div class="container my-5 d-flex justify-content-center">
+	<div class="card shadow-lg" style="max-width: 600px; width: 100%;">
+		<div class="card-body text-center">
+			<h2 class="card-title mb-4">Información de Contacto</h2>
 
-<form asp-action="Contacto" asp-controller="Home">
-	<div class="mb-3 m-3">
-		<label for="nombre" class="form-label">Nombre</label>
-		<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Pedro Perez" />
-	</div>
+			<p class="fs-5 d-flex justify-content-center align-items-center">
+				<i class="bi bi-person-circle me-2"></i>
+				<strong>Joseth Alarcón</strong>
+			</p>
 
-	<div class="mb-3 m-3">
-		<label for="email" class="form-label">Email</label>
-		<input type="text" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com"/>
-	</div>
-	<div class="mb-3 m-3"> 
-		<label for="mensaje" class="form-label">Mensaje</label>
-		<textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
-	</div>
-	<button type="submit" class="btn btn-primary m-3">Enviar</button>
+			<p class="fs-5 d-flex justify-content-center align-items-center">
+				<i class="bi bi-telephone me-2"></i>
+				<span id="telefono">+56 9 3407 5897</span>
+				<button class="btn btn-outline-light btn-sm ms-2 border-0" onclick="copiarTexto('telefono', 'copiadoTel')">
+					<i class="bi bi-clipboard"></i>
+				</button>
+				<span id="copiadoTel" class="ms-2 text-success small" style="display:none;">Copiado ✅</span>
+			</p>
 
-</form>
+			<p class="fs-5 d-flex justify-content-center align-items-center">
+				<i class="bi bi-envelope me-2"></i>
+				<span id="correo">joseth.30.17@gmail.com</span>
+				<button class="btn btn-outline-light btn-sm ms-2 border-0" onclick="copiarTexto('correo', 'copiadoCorreo')">
+					<i class="bi bi-clipboard"></i>
+				</button>
+				<span id="copiadoCorreo" class="ms-2 text-success small" style="display:none;">Copiado ✅</span>
+			</p>
+
+			<hr class="my-4" />
+
+			<div class="mb-4">
+				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=joseth.30.17@gmail.com&su=Contacto%20desde%20portafolio&body=Hola%20Joseth%2C%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo..."
+				   class="btn btn-primary me-2" target="_blank">
+					<i class="bi bi-envelope-fill me-1"></i> Enviar Correo
+				</a>
+				<a href="https://wa.me/56921913241?text=Hola%20Joseth%2C%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." target="_blank" class="btn btn-success">
+					<i class="bi bi-whatsapp me-1"></i> Enviar WhatsApp
+				</a>
+			</div>
+
+			<p class="fs-6 text-muted">
+				No dudes en contactarme. Estaré complacido de atender a tu mensaje y responder lo antes posible.
+			</p>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script>
+		function copiarTexto(elementoId, confirmacionId) {
+			const texto = document.getElementById(elementoId).textContent;
+			navigator.clipboard.writeText(texto).then(() => {
+				const confirmacion = document.getElementById(confirmacionId);
+				confirmacion.style.display = 'inline';
+				setTimeout(() => {
+					confirmacion.style.display = 'none';
+				}, 2000);
+			});
+		}
+	</script>
+}

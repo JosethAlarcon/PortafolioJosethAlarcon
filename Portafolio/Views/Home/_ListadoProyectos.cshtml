@@ -1,25 +1,45 @@
-﻿@model IEnumerable<ProyectoDTO>
+﻿@model IEnumerable<Portafolio.Models.ProyectoDTO>
 
-@if (Model is not null)
-{
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach (var proyecto in Model)
-            {
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="@proyecto.ImagenURL" class="card-img-top" alt="imagen proyecto" />
-                        <div class="card-body">
-                            <h5 class="card-title">@proyecto.Titulo</h5>
-                            <p class="card-text">@proyecto.Descripcion</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a class="btn btn-primary" href="@proyecto.Link" target="_blank" rel="noopener noreferrer">Visitar</a>
-                        </div>
+<style>
+    .proyecto-card {
+        max-width: 75%;
+        margin: auto;
+    }
+
+    .imagen-proyecto {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+    }
+
+        .imagen-proyecto:hover {
+            transform: scale(1.05);
+        }
+</style>
+
+<div class="container mt-5">
+    @foreach (var proyecto in Model)
+    {
+        <div class="card mb-5 shadow proyecto-card p-4" style="border-radius: 15px 15px 15px 15px; box-shadow: 0 5px 5px 0 gray">
+            <h3 class="card-title text-center mb-3">@proyecto.Titulo</h3>
+            <p class="card-text text-center">@proyecto.Descripcion</p>
+
+            <div class="row justify-content-center mb-3">
+                @foreach (var imagen in proyecto.Imagenes)
+                {
+                    <div class="col-md-4 col-sm-12 mb-3 text-center">
+                        <img src="@imagen" alt="Imagen de @proyecto.Titulo" class="imagen-proyecto" />
                     </div>
-                </div>
-            }
+                }
+            </div>
+
+            <div class="text-center">
+                <a href="@proyecto.Link" target="_blank" class="btn btn-primary">Visitar</a>
+            </div>
         </div>
-    </div>
-}
+    }
+</div>
+
+
 
