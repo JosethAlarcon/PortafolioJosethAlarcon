@@ -22,3 +22,28 @@ body {
     margin-bottom: 60px;
     height: 100%;
 }
+
+@media (max-width: 767.98px) {
+    .habilidades-wrapper {
+        margin-top: 0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .habilidades-wrapper {
+        margin-top: -190px;
+    }
+}
+
+.btn-personalizado {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
