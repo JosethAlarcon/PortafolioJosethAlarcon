@@ -8,6 +8,10 @@ builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>();
 
 var app = builder.Build();
 
+// Configurar el puerto dinámico para Render
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Render pasa el puerto en la variable PORT
+app.Urls.Add($"http://*:{port}");
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
