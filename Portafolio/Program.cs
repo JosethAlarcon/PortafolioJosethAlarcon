@@ -12,9 +12,7 @@ var app = builder.Build();
 // 1️⃣ Si Render pasa PORT → usarlo
 // 2️⃣ Si dotnet recibe --urls → lo respeta automáticamente
 // 3️⃣ Si nada está definido → usar puerto 5000
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-app.Urls.Add($"http://*:{port}");
-
+var port = Environment.GetEnvironmentVariable("PORT");
 if (!string.IsNullOrEmpty(port))
 {
     app.Urls.Add($"http://*:{port}");
