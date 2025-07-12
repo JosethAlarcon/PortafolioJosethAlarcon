@@ -1,4 +1,4 @@
-using Portafolio.Servicios;
+﻿using Portafolio.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,23 +8,32 @@ builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>();
 
 var app = builder.Build();
 
-// Configurar el puerto din�mico para Render
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // Render pasa el puerto en la variable PORT
-app.Urls.Add($"http://*:{port}");
+// Prioridad:
+// 1️⃣ Si Render pasa PORT → usarlo
+// 2️⃣ Si dotnet recibe --urls → lo respeta automáticamente
+// 3️⃣ Si nada está definido → usar puerto 5000
+var port = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrEmpty(port))
+{
+    app.Urls.Add($"http://*:{port}");
+    Console.WriteLine($"🔊 Usando puerto dinámico: {port}");
+}
+else
+{
+    Console.WriteLine($"✅ Usando configuración por defecto o --urls");
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    // Omitir redirección HTTPS para Render
+    // app.UseHttpsRedirection();
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapControllerRoute(
