@@ -1,21 +1,21 @@
 # Etapa 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /app
+WORKDIR /src
 COPY *.csproj ./
 RUN dotnet restore
 COPY . ./
-RUN dotnet publish -c Release -o /out --no-restore
+RUN dotnet publish -c Release -o /app/publish --no-restore
 
 # Etapa 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 
-# Render asigna un puerto dinámico con la variable $PORT
+# Usar el puerto dinámico asignado por Render
 ENV ASPNETCORE_URLS=http://+:$PORT
 
-COPY --from=build /out ./
+COPY --from=build /app/publish .
 
-# Exponer puerto para Render
+# Exponer puerto dinámico
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "Portafolio.dll"]
